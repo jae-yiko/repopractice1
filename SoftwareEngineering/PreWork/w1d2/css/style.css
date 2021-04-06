@@ -1,0 +1,15 @@
+#wide {
+    flex-wrap: wrap; 
+    display: flex;
+    height: 50px;
+    border: solid darkblue;
+    background-color:rgb(218, 235, 245);
+    flex-direction: row;
+    flex-grow:1;
+    justify-content: space-evenly;
+}
+
+.bar{
+    flex-flow: column wrap;
+    background-color:rgb(218, 235, 245);
+}

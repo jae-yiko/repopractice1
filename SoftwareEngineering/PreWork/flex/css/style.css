@@ -1,0 +1,109 @@
+#parent1{
+    border: solid red;
+    display: flex;
+}
+
+#parent2{
+    flex-wrap: nowrap; 
+    width: 300px;
+    border: solid lightblue;
+}
+
+#parent3{
+    flex-wrap: wrap; 
+    display: flex;
+    width: 300px;
+    border: solid darkblue;
+    flex-direction: row-reverse;
+}
+.child4{
+    flex: 4;
+    background-color: purple;
+    border: solid white;
+}
+
+#parent4{
+    display: flex;
+    border: solid yellow; 
+    width: 100px;
+    flex-wrap: wrap-reverse;
+}
+
+#parent5{
+    justify-content: flex-start; 
+    width: 300px;
+    display: flex;
+    border: solid orange;
+}
+
+#parent6{
+    height: 500px;
+    width: 300px;
+    display: flex;
+    border: solid rgb(102, 5, 19);
+    align-items: stretch;
+}
+.child6{
+    border: solid white;
+    background-color: lightgreen;
+}
+
+#parent7{
+    width: 300px;
+    display: flex;
+    border: solid rgb(150, 81, 91);
+    justify-content: space-evenly;
+}
+
+
+#parent8{
+    flex-direction: row; 
+    width: 500px;
+    display: flex;
+    border: solid lightpink;
+    justify-content: center;
+}
+
+#parent9{
+    flex-direction: row; 
+    width: 500px;
+    display: flex;
+    border: solid lightgreen;
+    justify-content: space-around;
+}
+
+#parent10{
+    flex-direction: row; 
+    width: 500px;
+    
+    display: flex;
+    border: solid lightslategray;
+    justify-content: flex-end;
+}
+
+#parent11{
+    width: 500px;
+    height: 100px;
+    display: flex;
+    border: solid rgb(88, 8, 236);
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#parent12{
+    width: 500px;
+    height: 100px;
+    display: flex;
+    border: solid gray;
+    justify-content: space-between;
+}
+
+
+.child{
+    border: solid white;
+    width:30px;
+    height: 30px;
+    background-color: lightgreen;
+    flex-shrink: 2;
+
+}

@@ -1,0 +1,71 @@
+form{
+    padding: 15px;
+    border-style: double;
+    font-weight: 900px;
+    font-style: italic;
+    text-align: center;
+}
+input[type=button] {
+    color: black;
+    background-color: rgb(249,230, 255);
+    padding: 5px;
+    text-align: center;
+}
+body{
+    background-color: lavender;
+    font-family: monospace;
+}
+
+h3{
+    font-size: larger;
+} 
+
+p{
+    font-size: 12px;
+}
+
+#introduction{
+    color: rgb(153, 153, 255);
+    font-size: 15px
+}
+
+ul{
+    font-style: italic;
+}
+
+a{
+    color:purple;
+}
+
+#div1, #div2{
+    position: static;
+}
+
+#div3{
+    position: relative;
+    background-color:#8b8bf8;
+    text-align: center;
+    font-size: larger;
+    color: rgb(255, 255, 255);
+    padding: 15px
+}
+
+p {font-weight:bold;}
+        p.ex4 {display: inline-block;}
+        p.ex2 {display: inline;}
+
+#div4{
+    color: rgb(77, 77, 255);
+}
+
+#div5{
+    color: rgb(26, 26, 255);
+}
+#div6{
+    color: rgb(0, 0, 230);
+}
+
+p.ex5 {
+    margin: 300px;
+  }
+

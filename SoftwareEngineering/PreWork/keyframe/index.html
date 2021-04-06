@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Keyframe animation</title>
+      <style type="text/css">
+       
+        .road{
+            height:20%;
+            background:rgb(100, 108, 114);
+            width:100%;
+            bottom: 100px;
+        }
+
+        .dog{
+            position:relative;
+            top:0px;
+            left:0px;
+            animation-name: move;
+            animation: move 3s;
+            animation-iteration-count: 2;
+            animation-direction: reverse;
+        }
+        @keyframes move{
+            0%{
+               transform:translateX(0px)  
+            }
+            100%{
+               transform:translateX(1000px)
+            }
+        }
+        </style>
+     </head>
+     <body>
+        <div class="road" >
+             <img class="dog" src="https://www.animatedimages.org/data/media/202/animated-dog-image-0077.gif">
+        </div>
+        
+     </body>
+</html>

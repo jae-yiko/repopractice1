@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "ritwickdey.liveserver",
+        "ritwickdey.live-sass",
+        "coenraads.bracket-pair-colorizer-2"
+    ]
+}
