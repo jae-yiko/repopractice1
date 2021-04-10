@@ -1,0 +1,13 @@
+.dot {
+    height: 200px;
+    width: 200px;
+    background-color:pink;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  #clock{ 
+    position: relative;
+    top: 70px;
+    font-size: 50px;
+  }

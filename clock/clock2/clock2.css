@@ -1,0 +1,21 @@
+.dot {
+  height: 200px;
+  width: 200px;
+  background-color:#3486c8;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+#clock{
+  position: relative;
+  top: 85px;
+  font-size: 30px;
+  background-color:#3486c8;
+  border: hidden;
+  max-width:70px;
+  left: 63px;
+  flex-wrap: row;
+
+}
+
