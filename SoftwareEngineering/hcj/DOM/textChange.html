@@ -1,0 +1,43 @@
+<!--
+    1) change the content of first para using innerHTML property
+    2)add a content for the second para2 using textcontent
+    3)create at least 3 <div> elements with the same class names
+    4)try to access them using the get.ElementByClassNames property and store in
+        the array
+    5) display the last element from the above array
+to open console on a webpage right click mouse and click inspect and this is to see any 
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>DOM</title>
+</head>
+<body>
+    <p id="para1">My name is NOT </p>
+    <p id="para2"> </p>
+
+    <div class="divclasses">div1</div>
+    <div class="divclasses">div2</div>
+    <div class="divclasses">div3</div>
+
+    <script>
+        let add= "Jae"
+        let previousP1= document.getElementById("para1").innerHTML;
+//think of .innerHTML and .textContent as a way to display somting on a webpage NOT replacing 
+        document.getElementById("para1").innerHTML=previousP1 + " " + add;
+        document.getElementById("para2").textContent= "my name is " + add;
+
+        let array1=document.getElementsByClassName("divclasses");//this is putting divclasses into array1 as an array
+        console.log(array1);//will show what line 33 looks like in the webpage console
+        let lastarray=array1[2];//
+        console.log(lastarray);
+
+        document.getElementsByClassName("divclasses")[2].innerHTML= "blah3"
+
+
+    </script>
+</body>
+</html>
