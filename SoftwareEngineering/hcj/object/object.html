@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="./binarysearch.js"></script>
+    <title>Object</title>
+</head>
+
+<body>
+    <h1>Object</h1>
+    <p id="para1"></p>
+    <p id="para2"></p>
+
+<script>
+    /*
+    object=student
+    properties: fname,lname,maths,english,comp sci
+        results/aerage of 3 subjects
+    method=CalculateAverage()
+        calculate average by using 3 subjects from the student object
+         and update the value of result property of student
+    */
+let person=//object
+{
+    fname:"Jae", //properties
+    lname:"Ko", 
+    math:50, 
+    english:0, 
+    computerScience: 100, 
+    age:5,
+
+    fullName:function()//method
+    {
+        return this.fname + " " + this.lname
+    },//this , is important when working with objects
+
+    avg: function()//method
+    {
+        return (this.math + this.english + this.computerScience)/3//this is the average of the 3 subject scores
+    }
+}
+
+document.getElementById("para1").innerHTML=person.fullName();//displaying my name
+document.getElementById("para2").innerHTML=person.avg();//displaying the average
+
+</script>
+</body>
+
+
+
+</html>
