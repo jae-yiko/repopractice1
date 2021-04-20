@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>OOP shapes</title>
+</head>
+<body>
+    <h2 id="Shapes"></h2>
+    <p id="p1"></p>
+    <br>
+
+    <script>
+        let text= '<ul>';
+        let pi = 3.14;
+//each shape has its own constructor
+
+        class Circle
+        {//radiucC, sidesC are parameters
+            constructor(radiusC, sidesC)
+            {//below is creating the parameters 
+                this.radiusC = radiusC;
+                this.sidesC = sidesC;
+            }
+
+            getAreaofCircle()
+            {//make new let areaC and make a formula to equal the area of a circle so now anytime we are talking about area of a circle use this.areaC as seen in line 40
+                let areaC = (this.radiusC * this.radiusC) * pi;
+                this.areaC = areaC;
+            }
+
+            getSidesofCircle()//this is a method that tells us how many sides a circle has
+            {//because sidesC is 0 (in line 44) and now in order to display how many sides there are use this.circleSides in line 40
+                let circleSides = this.sidesC;
+                this.circleSides = circleSides;
+            }
+
+            displayCircle()//this is what will display it on the webpage because of text = text + <li> + </li>
+            {//<br> is used to make a line break on the webpage
+                text = text + "<li>" + "area of circle: " + this.areaC + "<br>" + 
+                    "how many sides does a circle have: " + this.circleSides + "</li>";
+            }
+        }
+//the order of these circle1.getblah() matters because of the order these are being made before being displayed
+        const circle1 = new Circle (2,0);
+        circle1.getAreaofCircle();
+        circle1.getSidesofCircle();
+        circle1.displayCircle();
+
+
+        class Rectangle
+        {
+            constructor(lengthR, widthR, sides)
+            {
+                this.lengthR = lengthR;
+                this.widthR = widthR;
+                this.sides = sides;
+            }
+
+            getAreaofRectangle()
+            {
+
+                let areaRectangle = this.lengthR * this.widthR;
+                this.areaRectangle = areaRectangle;
+            }
+
+            getSidesofRectangle()
+            {
+
+                let rectSides = this.sides;
+                this.rectSides = rectSides;
+            }
+
+            displayRectangle()
+            {
+                text = text + "<li>" + "area of Rectangle: " + this.areaRectangle + "<br>" + "how many sides does a Rectangle have: " + this.rectSides + "</li>";
+            }
+
+        }
+
+        const rectangle1 = new Rectangle (5,2,4);
+        rectangle1.getAreaofRectangle();
+        rectangle1.getSidesofRectangle();
+        rectangle1.displayRectangle(); 
+
+        class Square
+        {
+            constructor(allsides, Ssides)
+            {
+                this.allsides = allsides;
+                this.Ssides = Ssides;
+            }
+
+            getAreaofSquare()
+            {
+                let areaSquare = this.allsides * this.allsides;
+                this.areaSquare = areaSquare;
+            }
+
+            getSidesofSquare()
+            {
+
+                let Ssides = this.Ssides;
+                this.Ssides = Ssides;
+            }
+
+            displaySquare()
+            {
+                text = text + "<li>" + "area of Square: " + this.areaSquare + "<br>" + "how many sides does a Square have: " + this.Ssides + "</li>";
+            }
+
+        }
+
+        const square1 = new Square (2,4);
+        square1.getAreaofSquare();
+        square1.getSidesofSquare();
+        square1.displaySquare(); 
+
+        text = text + '</ul>';
+        document.getElementById("p1").innerHTML = text;
+    </script>
+</body>
+</html>
