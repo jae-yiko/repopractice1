@@ -1,0 +1,25 @@
+.button:hover {
+    background-color:lightskyblue;
+    color:black;
+}
+
+.button{
+    background-color: blue;
+    color: white;
+}
+
+.header{
+    top:0;
+    text-align: center;
+}
+
+#tada{
+    padding-top: 50px;
+    position: absolute;
+    padding-bottom: 100px;
+    left: 100px;
+}
+
+body{
+    background-color: pink;
+}
