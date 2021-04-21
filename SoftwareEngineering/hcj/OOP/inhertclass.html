@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>OOD Software Engineering Class</title>
+</head>
+<body>
+    <h2 id="perscholas"></h2>
+    <p id="p1"></p>
+    <br>
+    <p id="p2"></p>
+
+    <script>
+        let text= '<ul>';
+        
+        const PERSCHOLAS= "<ul>" + "Per Scholas Cohort 06" + "</ul>"
+        
+        let idnum=0;//declared globally
+
+        class Major
+        {
+            constructor(sMajor)     
+            {
+                this.sMajor = sMajor;    
+            } 
+        }
+
+        class Students extends Major 
+        {
+            static count=0;
+            constructor(fname, lname, email, phone, address, sMajor)//is related to each object
+            {
+                super(sMajor);
+                this.fname = fname;
+                this.lname = lname;
+                this.id = ++idnum;
+                this.email = email;
+                this.phone = phone;
+                this.address = address;
+            }
+            
+            getStudentInfo()
+            {
+                let fullname = this.fname + " " + this.lname;
+                this.fullname = fullname;
+            }
+
+            displayStudents()
+            {
+                text = text + "<li>" + "student id: " + this.id + '<br>' + "name:" + this.fullname + '<br>' 
+                    + "email:" + this.email + '<br>' + "phone number:" + this.phone + '<br>' + "address:" 
+                    + this.address + '<br>' + "average:" + this.avg + '<br>' + "major: " + this.studentsM + "</li>";
+            }
+            
+            calcAvg(a,b,c)
+            {
+                let avg = (a + b + c) / 3;
+                this.avg = avg;
+
+            }
+
+            MajorStudent()
+            {
+                let studentsM =  this.sMajor;
+                this.studentsM = studentsM;
+            }
+
+            static countStudents()
+            {
+                Students.count++;
+            }
+        }
+            
+        document.getElementById("perscholas").innerHTML = PERSCHOLAS;
+        //james and ford are argument
+        const s1 = new Students ("James", "Ford", "Ford.J@gmail.com", "123-234-4567", "12 Peanut St.", "Biology");
+        s1.getStudentInfo();
+        s1.calcAvg(70,70,70);
+        s1.MajorStudent();
+        s1.displayStudents();
+        Students.countStudents();
+
+        const s2 = new Students ("Alice", "Thompsan", "Thompsan.A@gmail.com", "222-354-3464", "124 Watermelon St.", "Art");
+        s2.getStudentInfo();
+        s2.calcAvg(70,70,70);
+        s2.MajorStudent();
+        s2.displayStudents();
+        Students.countStudents();
+
+        const s3 = new Students ("Joe", "Anderson", "Anderson.J@gmail.com", "345-346-5785", "57 Penny St.", "Chemistry");
+        s3.getStudentInfo();
+        s3.calcAvg(70,70,70);
+        s3.MajorStudent();
+        s3.displayStudents();
+        Students.countStudents();
+
+        const s4 = new Students ("Jill", "Bravo", "Bravo.J@gmail.com", "124-568-2468", "234 Smell St", "Buisness");
+        s4.getStudentInfo();
+        s4.calcAvg(70,70,70);
+        s4.MajorStudent();
+        s4.displayStudents();
+        Students.countStudents();
+
+        text = text + '</ul>';
+        document.getElementById('p1').innerHTML = text;
+        document.getElementById("p2").innerHTML = "there are " + Students.count + " students in this class";
+    </script>
+
+</body>
+</html>

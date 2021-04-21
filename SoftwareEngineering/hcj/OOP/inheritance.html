@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>OOP Inheritance</title>
+</head>
+<body>
+    <p id=p1></p>
+    <p id=p2></p>
+
+    <script>
+        class Car 
+        {
+            constructor(brand)
+            {
+                this.carname = brand;
+            }
+        
+        }
+
+        class Model extends Car 
+        {
+            constructor(brand, mod, year)
+            {
+                super(brand)
+                this.model = mod;
+                this.year = year;
+            }
+
+            present()
+            {
+                return 'I have ' + this.carname;
+            }
+
+            show()
+            {
+                return 'I have ' + this.model + " made in " + this.year
+            }
+        }
+
+        let mycar = new Model ("Ford", "Mustang", 2006);
+
+        document.getElementById("p1").innerHTML = mycar.present();
+        document.getElementById("p2").innerHTML = mycar.show();
+        
+    </script>
+</body>
+</html>

@@ -2,8 +2,8 @@
 
 function getData()
 {
-    let limit=document.getElementById("textNum").value;
-    let borough= event.target.innerHTML.toUpperCase();
+    let limit=document.getElementById("textNum").value;//textNum is the input id in html to get the limit
+    let borough= event.target.innerHTML.toUpperCase();//this will grab whatever I clicked and store it and in this case it is any of the blue buttons and then capitalize it so that the link in line 8 so that the link will work
     
     fetch("https://data.cityofnewyork.us/resource/erm2-nwe9.json?agency=NYPD&borough=" + borough + '&$limit=' + limit)
     .then((rawData)=> rawData.json())
@@ -14,8 +14,10 @@ function getData()
 
 function displayData(data)
     {
-        removeData();
         console.log(data);
+        //innerHTML is text and tags
+        let tada1 = document.getElementById("tada").innerHTML = "";
+
 
         for(let i in data)//for in loops are being used here
         {//attricute(id/class/onclick) are what characterizes elements(tag)
@@ -33,14 +35,14 @@ function displayData(data)
             let clickIt = document.createAttribute("onclick");//
             clickIt.value="show()";//show the resolution description
             btn.setAttributeNode(clickIt);//attaching attribute to btn
-            btn.style.position= "fixed";
+            btn.style.position= "fixed";//36-38 is only styling the response buttons
             btn.style.left="1000px";
             btn.style.color="red";
             
             
-            node.innerHTML=oneValue;
-            nodeB.innerHTML=resolution;
-            tada1.append(node);
+            node.innerHTML=oneValue;//created node will show oneValue in webpage
+            nodeB.innerHTML=resolution;//created nodeB will show resolution in webpage
+            tada1.append(node);//tada1 created in line 23 is referring to html line 23 meaning all 43-45 will be shown through tada
             tada1.append(btn);
             tada1.append(nodeB);
 
@@ -48,33 +50,17 @@ function displayData(data)
         }   
     }
 
-function removeData()
-{
-    let limit=document.getElementById("textNum").value;//
-
-    let tada1 = document.getElementById("tada");//refering to HTML line 22
-    let outerdiv = tada1.childNodes
-            console.log(outerdiv)
-    if(tada1.hasChildNodes()) 
-    {
-        for (let i = 0; i < limit; i++)    
-        {
-            for (let j = 0; j < outerdiv.length; j++)
-            {
-            outerdiv[j].remove();
-            }
-        }
-    }
-}
-
 function show() //when you click on btn response it will disappear 
 {
-    x = event.target.nextSibling//nextsibling is refering to line 39
+    x = event.target.nextSibling//event.target is whatever element that i clicked on (referring btn response) and nextsibling is referring to the next tag in this case its the <p> for nodeB
         if (x.hidden == true)
         {
             x.hidden = false
         }
-    else x.hidden = true
+        else
+        { 
+            x.hidden = true
+        }
     console.log(x)
 }
 
