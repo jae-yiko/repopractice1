@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+      <script type="text/javascript" src="app.js" defer></script>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- JEOPARDY BOARD  -->
+<div>
+    <div class="board"><!--made this nonclickable-->
+      <div class="row categories">
+        <div class="tile1">Addition</div>
+        <div class="tile1">Subtraction</div>
+        <div class="tile1">Division</div>
+        <div class="tile1">Multiplication</div>
+        <div class="tile1">Random</div>
+      </div>
+      <div class="row clues">
+        <div class="tile"> 
+          <div class="question-value">$100</div>
+          <div class="question-answer" >1+1=?"</div>
+
+        </div>
+        <div class="tile">
+          <div class="question-value">$100</div>
+          <div class="question-answer">1-2=?</div>
+        
+        </div>
+        <div class="tile">
+          <div class="question-value">$100</div>
+          <div class="question-answer">1/1=?</div>
+        
+        </div>
+        <div class="tile">
+          <div class="question-value">$100</div>
+          <div class="question-answer">1*1=?</div>
+        
+        </div>
+        <div class="tile">
+          <div class="question-value">$100</div>
+          <div class="question-answer">(1+1)/1=?</div>
+        
+        </div>
+      </div>
+      <div class="row clues">
+        <div class="tile"> 
+          <div class="question-value">$200</div>
+          <div class="question-answer">10+10=?</div>
+        
+        </div>
+        <div class="tile">
+          <div class="question-value">$200</div>
+          <div class="question-answer">1-5=?</div>
+        
+        </div>
+        <div class="tile">
+          <div class="question-value">$200</div>
+          <div class="question-answer">1/10=?</div>
+        
+        </div>
+        <div class="tile">
+          <div class="question-value">$200</div>
+          <div class="question-answer">1*3987=?</div>
+
+        </div>
+        <div class="tile">
+          <div class="question-value">$200</div>
+          <div class="question-answer">24589*293857=?</div>
+        
+        </div>
+      </div>
+      <div class="row clues">
+        <div class="tile" onclick="toggleActive(this)"> 
+          <div class="question-value">$300</div>
+          <div class="question-answer">1+1=?</div>
+        
+        </div>
+        <div class="tile" onclick="toggleActive(this)">
+          <div class="question-value">$300</div>
+          <div class="question-answer">1-(-1)=?</div>
+        
+        </div>
+        <div class="tile" onclick="toggleActive(this)">
+          <div class="question-value">$300</div>
+          <div class="question-answer">1/134=?</div>
+        
+        </div>
+        <div class="tile" onclick="toggleActive(this)">
+          <div class="question-value">$300</div>
+          <div class="question-answer">20*12=?</div>
+        
+        </div>
+        <div class="tile" onclick="toggleActive(this)">
+          <div class="question-value">$300</div>
+          <div class="question-answer">1+1y=?</div>
+        
+        </div>
+      </div>
+      <div class="row clues">
+        <div class="tile" onclick="toggleActive(this)"> 
+          <div class="question-value">$400</div>
+          <div class="question-answer">34x+34y=?</div>
+        
+        </div>
+        <div class="tile" onclick="toggleActive(this)">
+          <div class="question-value">$400</div>
+          <div class="question-answer">34x-34y=?</div>
+        
+        </div>
+        <div class="tile" onclick="toggleActive(this)">
+          <div class="question-value">$400</div>
+          <div class="question-answer">34x/34y=?</div>
+        
+        </div>
+        <div class="tile" onclick="toggleActive(this)">
+          <div class="question-value">$400</div>
+          <div class="question-answer">34x*34y=?</div>
+        
+        </div>
+        <div class="tile" onclick="toggleActive(this)">
+          <div class="question-value">$400</div>
+          <div class="question-answer">34x+34y*2234513=?</div>
+        
+        </div>
+      </div>
+      <div class="row clues">
+        <div class="tile" onclick="toggleActive(this)"> 
+          <div class="question-value">$500</div>
+          <div class="question-answer">124095103495+39487593478=?</div>
+        
+        </div>
+        <div class="tile" onclick="toggleActive(this)">
+          <div class="question-value">$500</div>
+          <div class="question-answer">1346257-13462356=?</div>
+        
+        </div>
+        <div class="tile" onclick="toggleActive(this)">
+          <div class="question-value">$500</div>
+          <div class="question-answer">13462457/25747=?</div>
+        
+        </div>
+        <div class="tile" onclick="toggleActive(this)">
+          <div class="question-value">$500</div>
+          <div class="question-answer">20399683*1324563=?</div>
+        
+        </div>
+        <div class="tile" onclick="toggleActive(this)">
+          <div class="question-value">$500</div>
+          <div class="question-answer">375245*2357346783567135624573468=?</div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- SCORECARD is now visable and working when you click the buttons  -->
+<div id="scorecard">
+  <div id="team1">
+    TEAM 1
+    <h1 class="score1"></h1>
+    <button class="increment1">+</button>
+    <button class="decrement1">-</button>
+  </div>
+  <div id="team2">
+    TEAM 2
+    <h1 class="score2"></h1>
+    <button class="increment2">+</button>
+    <button class="decrement2">-</button>
+  </div>
+  <div id="team3">
+    TEAM 3
+    <h1 class="score3"></h1>
+    <button class="increment3">+</button>
+    <button class="decrement3">-</button>
+  </div>
+</div>
+</body>
+</html>
