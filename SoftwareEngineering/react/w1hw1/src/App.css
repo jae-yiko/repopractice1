@@ -1,0 +1,32 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "Dashboard Reviews Average_Rating Sentiment_Analysis"
+    "Dashboard Website_Visitors Website_Visitors Website_Visitors"
+    ;
+}
+
+
+.Reviews {grid-area:Reviews;
+  background-color: rgb(250, 216, 253);
+}
+
+.Average_Rating {grid-area: Average_Rating;
+  background-color: rgb(250, 216, 253);
+}
+
+.Sentiment_Analysis {grid-area: Sentiment_Analysis;
+  background-color: rgb(250, 216, 253);
+}
+
+.Website_Visitors {grid-area: Website_Visitors;
+  background-color: rgb(250, 216, 253);
+}
+
+.Dashboard {grid-area: Dashboard;
+  background-color: rgb(250, 216, 253);
+}
+
