@@ -27,6 +27,16 @@ const bmiJH= bmiJW/(johnHeight*johnHeight);
 const higherBMIW= bmiMW > bmiJW;
 const higherBMIH= bmiMH > bmiJH;
 
+//using ifelse to see whoes BMI is higher
+if(higherBMIW)
+{
+    console.log("Mark's BMI " + bmiMW + " has the higher BMI than John's BMI " + bmiJW);
+}
+else
+{
+    console.log("John's BMI " + bmiJW + " has the higher BMI than Mark's BMI " + bmiMW);
+}
+
 //desplaying mark and johns weight and the boolean=true (same with the height)
 console.log(bmiMW, bmiJW, higherBMIW);
 console.log(bmiMH, bmiJH, higherBMIH);
