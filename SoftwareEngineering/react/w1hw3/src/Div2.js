@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
-import Div1 from './Div1.js'
+import Div3 from './Div3'
 
 class Div2 extends Component {
     render(){
         return(
             <div>
-                <Div1/>
+                <Div3/>
+                <Div3/>
             </div>
         )
     }

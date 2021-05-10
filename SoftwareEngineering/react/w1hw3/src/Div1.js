@@ -6,7 +6,6 @@ class Div1 extends Component {
         return(
             <div>
                 <TardisBox1/>
-                <TardisBox1/>
             </div>
         )
     }
