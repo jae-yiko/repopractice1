@@ -1,0 +1,15 @@
+body{
+    margin-top: 100px;
+    width: 5000px;
+    height:5000px;
+    background-image: url('https://media.self.com/photos/5e973ee8b84efd000884b91c/4:3/w_2560%2Cc_limit/grocery-shopping-safe_alt.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgb(108, 182, 108);
+}
+
+
+button{
+    background-color: rgb(139, 204, 247);
+}
+
