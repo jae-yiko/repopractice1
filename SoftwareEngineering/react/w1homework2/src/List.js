@@ -22,6 +22,10 @@ class List extends Component {
     render()
     {
         console.log(this.props.arrayList)
+        //if object in array ispurchased then remove from array
+        //if object in array isNOTpurchased then leave in the array
+        var filteredList = this.props.arrayList.filter((item) => item.isPurchase? false:true)
+
         return(
             <div>
                 
@@ -31,14 +35,15 @@ class List extends Component {
                         Units: <input text="text" placeholder="Units" onChange={this.handleChange} value={this.state.newUnit} name ='newUnit'/>
                         Quantity: <input text="text" placeholder="Quantity" onChange={this.handleChange} value={this.state.newQuantity} name ='newQuantity'/>
                     </label>
-                    <input type="submit" value="submit"/>
+                    
+                    <input className="button2" type="submit" value="submit"/>
                 </form>
                 
                 <ul className="list">
-                    {this.props.arrayList.map((val,key)=>{
+                    {filteredList.map((val)=>{
                         return(
                             <li >
-                                <div>{val.item}<br/>{val.units}<br/> {val.quantity}</div><button value={key} onClick={this.props.handlePurchase}>Remove</button>
+                                <div>{val.item}<br/>{val.units}<br/> {val.quantity}</div><button value={val.id} onClick={this.props.handlePurchase} >Remove</button>
                             
                             </li>
                         )
