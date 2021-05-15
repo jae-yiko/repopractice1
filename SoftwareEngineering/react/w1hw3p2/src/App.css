@@ -1,0 +1,5 @@
+/* makes answer disappear first then in answer.js we toggle it */
+.answer2{
+    display: none;
+}
+
