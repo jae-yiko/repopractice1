@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import Jep from './Jep'
 import './App.css'
 
 
@@ -7,11 +6,11 @@ class Answer extends Component {
     constructor()
     {
         super()
-
-
+        // bind it so it will show on the browser
         this.showAnswer = this.showAnswer.bind(this)
     }
-// showAnswer is how to toggle the answer to show up 
+
+    // showAnswer is how to toggle the answer to show up using css
     showAnswer()
     {
         let showit = document.getElementsByClassName("answer2")[0]
@@ -25,15 +24,19 @@ class Answer extends Component {
         }
     }
 
+
     render()
     {
         return (
+            // when you click the answer button it will toggle the answer
             <div className="answershowit">
                 <div><button id="Answer" onClick = {this.showAnswer}>Answer</button></div>
 
+                {/* this is getting the answer from Jep */}
                 <div className="answer2">{this.props.answer1} </div>
             </div>
         )
     }
 }
+
 export default Answer

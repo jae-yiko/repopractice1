@@ -1,5 +1,70 @@
-/* makes answer disappear first then in answer.js we toggle it */
+/* makes answer disappear first then in answer.js we toggle it using showAnswer() */
 .answer2{
     display: none;
 }
 
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+/* makes spaces between the increase, score, decrease */
+.scoreAndB{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* contains all of the buttons and the category, questions, and answers */
+.everything{
+    display: flex;
+    flex-direction: column;
+    color:rgb(240, 225, 26)
+}
+
+/* added the gif */
+.img{
+    background-image: url('https://3z489t2p9kbdv4il24as7q51-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/YpJilaXXT8qJR6HQVKFM_ISM_Trivia.gif');
+    
+    /* height is is from the top of the image and any past it would look like a gap is between the image and get button */
+    height: 369px;
+    width: 700px;
+    
+    /* below contains all of the image as i play with the height and width */
+    background-size: contain;
+    
+    /* stops any repeat of the image from happening */
+    background-repeat: no-repeat;
+    
+    /* this is how i centered the image */
+    margin-left:auto;
+    margin-right: auto;
+
+}
+
+/* controls the width of the button bcause it was too long */
+.getQ{
+    width: 500px;
+}
+
+/* centers the get question button because it was too long */
+.getQbtn{
+    display: flex;
+    justify-content: center;
+}
+
+/* control the width of the button because it was too long */
+.resTart{
+    width: 500px;
+}
+
+/* used to center the restart button */
+.resTartbtn{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    background-color: rgb(88, 38, 38);
+    color: white;
+     border-radius: 12px; /*rounds the edges of the buttons */
+}
