@@ -1,17 +1,19 @@
 import React, {Component} from 'react'
 import Scores from './Scores'
-import Answer from './Answer'
+// import Answer from './Answer'
 
 class Jep extends Component{
-    constructor()
+    constructor(props)
     {
-        super()
+        super(props)
         this.state = {
             question:"",
             answer:"",
             category:"",
+            tada: false,
         }
         this.componentDidMount = this.componentDidMount.bind(this)
+        this.showAnswer = this.showAnswer.bind(this)
     }
 
     componentDidMount()
@@ -24,9 +26,20 @@ class Jep extends Component{
                 this.setState({ question: triviaData[0].question})
                 this.setState({ answer: triviaData[0].answer})
                 this.setState({ category: triviaData[0].category.title})
-        
-            }
-        )
+                }
+            )
+    }
+
+    // contional renders the answer to show and hide
+    showAnswer()
+    {
+        if(this.state.showanswer) {
+            this.setState({showanswer:false})
+        }
+        else{
+            
+            this.setState({showanswer:true})
+        }
     }
 
     render()
@@ -53,8 +66,12 @@ class Jep extends Component{
                         <h3>Question: {this.state.question}</h3>
                     </div>
 
-                    {/* sending answer to component Answer */}
-                    <Answer answer1 = {this.state.answer}/>
+                    {/* shows the answer in browser */}
+                    <div>
+                        <h3> <button onClick={this.showAnswer}>Show Answer</button></h3>
+                        {/* hides and shows the answer in the browser */}
+                        <div id="answer" className="QA" >{this.state.showanswer? this.state.answer:" "}</div>
+                    </div>
 
                     {/* recieves information on the methods for increase, score, and decrease */}
                     <Scores/>

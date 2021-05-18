@@ -1,36 +1,37 @@
 import React, {Component} from 'react'
 
-// makes the original score 0
-window.score= 0
-
 class Scores extends Component {
     constructor(props)//pulling from jep
     {
         super(props)//pulling from react library
-
+        this.state = 
+        {
+            score:0
+        }
+        this.increaseB = this.increaseB.bind(this)
+        this.decreaseB = this.decreaseB.bind(this)
     }
 
-    // using line 3 to add score
+    // using line 9 as the original score
     increaseB (){
-        window.score= window.score+1
-        console.log(window.score)
-        // displays the score on browser along with line 41
-        document.getElementById("showScore").innerHTML = window.score
+        this.setState ({
+            score: this.state.score + 1
+        })
+        console.log(this.state.score)
     }
 
-    // using line 3 to deduct score
+    // using line 9 as the original score
     decreaseB(){
-        window.score= window.score-1
-        console.log(window.score)
-        // displays the score on browser along with line 41
-        document.getElementById("showScore").innerHTML = window.score
+        this.setState ({
+            score: this.state.score - 1
+        })
+        console.log(this.state.score)
     }
 
     render()
     {
         return (
             <div className = "scoreAndB" >
-
                 {/* gives the increase button the increase method from line 14*/}
                 <div>
                     <h2>
@@ -41,7 +42,7 @@ class Scores extends Component {
                 {/* makes the score show up on the browser along with lines 18 and 26 */}
                 <div id="showScore">
                     <h2>
-                        {window.score}
+                        {this.state.score}
                     </h2>
                 </div>
 
@@ -51,7 +52,6 @@ class Scores extends Component {
                         <button id="decrease" onClick={this.decreaseB}>Decrease</button>
                     </h2>
                 </div>
-
             </div>
         )
     }

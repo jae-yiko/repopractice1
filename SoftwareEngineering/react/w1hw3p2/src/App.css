@@ -1,7 +1,7 @@
 /* makes answer disappear first then in answer.js we toggle it using showAnswer() */
-.answer2{
+/* .answer2{
     display: none;
-}
+} */
 
 body{
     background-color: rgb(0, 0, 0);
