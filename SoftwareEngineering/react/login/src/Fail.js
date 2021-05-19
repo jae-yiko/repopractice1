@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Fail = () => {
+const Fail = () => 
+{
 
-    
     return (
         <div>
-            try again
+            Invalid username or password
         </div>
     )
 }

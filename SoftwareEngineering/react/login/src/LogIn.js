@@ -9,27 +9,40 @@ const LogIn = (props) => {
     //line 10 and 11 is what will be used to check to see if the username and password is correct
     const userCheck = 'jae';
     const passCheck = '123';
+
+    //line 14 and 15 is used to take users input for username and password
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+
+    //showLogin used in handleLogin to set the result for the if statements
     const [showLogin, setShowLogin] = useState("")
 
-    const handleLogin = (event) => {
+
+    const handleLogin = (event) => 
+    {
+
+        //event.preventDefault is added to cancel any default action that belongs to an event
         event.preventDefault()
-        if (username === userCheck && password === passCheck){
-            setShowLogin(<Success username={props.username}/>)
+
+        //checking to see if username(user input) = userCheck(hard coded) and the same goes for password
+        if (username === userCheck && password === passCheck)
+        {
+            setShowLogin(<Success userCheck={userCheck}/> )
         }
-        else {
+        else 
+        {
             setShowLogin(<Fail />)
         }
     }
     const handleChange1 = (event) => setUsername(event.target.value)
     const handleChange2 = (event) => setPassword(event.target.value)
+    
     return(
         <div>
             <form onSubmit = {handleLogin}>
-            <label>Username: <input id="username" type="text" onChange={handleChange1}/> </label>
-            <label>Password: <input id="password" type="password" onChange={handleChange2}/></label>
-            <button>Login</button>
+                <label> <input id="username" type="text" placeholder="Username" onChange={handleChange1}/></label>
+                <label><input id="password" type="text" placeholder="Password" onChange={handleChange2}/></label>
+                <button>Login</button>
             </form>
            <div> {showLogin} </div>
         </div>

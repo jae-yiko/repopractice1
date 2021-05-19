@@ -1,32 +1,13 @@
 import React from 'react'
 
-const Success = () => {
+const Success = (props) => 
+{
     return (
         <div>
-            Welcome
+            Welcome {props.userCheck}
         </div>
+
     )
 }
 
 export default Success
-
-
-// function Success(props) {
-
-//     const userCheck = "Jae123"
-//     if ({props.user1} === userCheck)
-//     {
-//         if(password === passCheck)
-//         {
-//             alert("Welcome" + userCheck)
-//         }
-//     }
-
-//     return (
-//         <div>
-//             {props.user1}
-//         </div>
-//     )
-// }
-
-// export default Success
